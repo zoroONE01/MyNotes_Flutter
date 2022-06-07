@@ -40,33 +40,6 @@ class DatabaseHelper {
             $clIsHidden INTEGER NOT NULL DEFAULT 0
           )
           ''');
-    insertNote(Note(
-        title: '0Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '1Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '2Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '3Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '4Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '5Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '6Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '7Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
-    insertNote(Note(
-        title: '8Nếu một ngày chúng ta không còn gặp',
-        content: 'Nếu một ngày chúng ta không còn gặp'));
   }
 
   Future<int> insertNote(Note note) async {

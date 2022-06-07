@@ -6,7 +6,6 @@ import 'package:my_notes/constants/app_text_styles.dart';
 import 'package:my_notes/routes/app_router.dart';
 import 'package:my_notes/widgets/button_intro.dart';
 import 'package:provider/provider.dart';
-
 import '../../providers/tab_counter_provider.dart';
 import '../../widgets/button_back.dart';
 import '../../widgets/tab_indicator.dart';
@@ -20,6 +19,14 @@ class IntroScreen extends StatefulWidget {
 
 class _IntroScreenState extends State<IntroScreen>
     with SingleTickerProviderStateMixin {
+  // bool isFirstInstall = false;
+
+  // _IntroScreenState() {
+  //   FirstInstallSharedPreferences.instance
+  //       .getBooleanValue("isFirstInstall")
+  //       .then((value) => isFirstInstall = value);
+  // }
+
   static const List<Widget> introTabs = <IntroTab>[
     IntroTab(
         buttonRightText: AppStrings.skip,
@@ -58,6 +65,7 @@ class _IntroScreenState extends State<IntroScreen>
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: DefaultTabController(
