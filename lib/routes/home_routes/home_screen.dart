@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                                 Text(
                                                   value.noteCategory != 0
-                                                      ? 'Return All Note'
+                                                      ? (value.noteCategory + value.noteCategory).toString()
                                                       : 'Move to Hide',
                                                   style: const TextStyle(
                                                       color: Colors.white),
@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   width: 32,
                                                   height: 32,
                                                 ),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 5,
                                                 ),
                                               ],
@@ -266,7 +266,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     background: Colors.white,
                                                     isVertical: true),
                                               )
-                                            : Placeholder(
+                                            : const Placeholder(
                                                 color: Colors.transparent,
                                                 fallbackHeight: 198,
                                               ),
