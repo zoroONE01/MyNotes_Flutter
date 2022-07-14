@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               child: Consumer<NotesProvider>(
-                builder: (context, value, child) {
+                builder: (context, value, _) {
                   return SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -413,7 +413,7 @@ class _NoteCategoryState extends State<NoteCategory> {
   @override
   Widget build(BuildContext context) {
     return Consumer<NotesProvider>(
-      builder: (context, value, child) => Column(
+      builder: (context, value, _) => Column(
         children: [
           Row(
             children: [
