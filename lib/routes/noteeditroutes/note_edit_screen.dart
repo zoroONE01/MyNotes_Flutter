@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_notes/data/local/database_helper.dart';
-import 'package:my_notes/models/note.dart';
-import 'package:my_notes/providers/bot_nav_provider.dart';
-import 'package:my_notes/providers/notes_provider.dart';
 import 'package:my_notes/widgets/button_back.dart';
 import 'package:provider/provider.dart';
 
+import '/models/note.dart';
+import '/providers/bot_nav_provider.dart';
+import '/providers/notes_provider.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_strings.dart';
 import '../../constants/app_text_styles.dart';
