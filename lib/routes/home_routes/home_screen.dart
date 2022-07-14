@@ -552,7 +552,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
             Column(
               children: [
                 Text(
-                  DatetimeUtil.getCurrentDate(),
+                  datimeutil.GetCurrentDate(),
                   style: AppTextStyles.body2,
                 ),
                 const Text(

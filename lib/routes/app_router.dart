@@ -4,7 +4,7 @@ import 'package:my_notes/models/note.dart';
 import 'package:my_notes/routes/introroutes/intro_sreen.dart';
 import 'package:my_notes/routes/noteeditroutes/note_edit_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'homeroutes/home_screen.dart';
+import 'home_routes/home_screen.dart';
 
 class AppRouter {
   static const homePage = '/';
