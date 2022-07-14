@@ -543,28 +543,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              children: [
-                Text(
-                  DatetimeUtil.getCurrentDate(),
-                  style: AppTextStyles.body2,
-                ),
-                const Text(
-                  AppStrings.notes,
-                  style: AppTextStyles.h2,
-                )
-              ],
-            ),
-            SvgPicture.asset(
-              AppPaths.icMore,
-              width: 22,
-              height: 22,
-            )
-          ],
-        ),
+        const TopHomeBar(),
         const SizedBox(
           height: 11,
         ),
@@ -588,6 +567,38 @@ class _HomeTabBarState extends State<HomeTabBar> {
         // const SizedBox(
         //   height: 20,
         // ),
+      ],
+    );
+  }
+}
+
+class TopHomeBar extends StatelessWidget {
+  const TopHomeBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          children: [
+            Text(
+              DatetimeUtil.getCurrentDate(),
+              style: AppTextStyles.body2,
+            ),
+            const Text(
+              AppStrings.notes,
+              style: AppTextStyles.h2,
+            )
+          ],
+        ),
+        SvgPicture.asset(
+          AppPaths.icMore,
+          width: 22,
+          height: 22,
+        )
       ],
     );
   }
