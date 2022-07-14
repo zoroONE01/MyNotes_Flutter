@@ -13,11 +13,11 @@ class Note1 {
     var item = Note1();
   }
   void nullCheck1(int? number){
-    id = number == null ? 1 : 2;
+    id = number ?? 1;
   }
 
   void nullCheck2(Note1? note){
-    id = note == null ? null : note.id;
+    id = note?.id;
   }
 
   void concatArr(){
