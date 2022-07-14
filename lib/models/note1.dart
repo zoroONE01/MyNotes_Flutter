@@ -22,8 +22,7 @@ class Note1 {
 
   void concatArr(){
     var y = [4,5,6];
-    var x = [1,2];
-    x.addAll(y);
+    var x = [1,2,...y];
   }
 
   void formatTitle(){
