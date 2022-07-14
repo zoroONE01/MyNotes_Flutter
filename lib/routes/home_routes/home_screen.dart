@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                                 Text(
                                                   value.noteCategory != 0
-                                                      ? (value.noteCategory + value.noteCategory).toString()
+                                                      ? '${value.noteCategory + value.noteCategory}'
                                                       : 'Move to Hide',
                                                   style: const TextStyle(
                                                       color: Colors.white),
