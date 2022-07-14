@@ -66,9 +66,7 @@ class _IntroScreenState extends State<IntroScreen>
 
   @override
   Widget build(BuildContext context) {
-    introTabs.forEach((element) {
-      print(element.toString());
-    });
+    introTabs.forEach(print);
     return Scaffold(
       backgroundColor: Colors.white,
       body: DefaultTabController(
