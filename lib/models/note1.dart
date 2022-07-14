@@ -3,11 +3,11 @@ import 'package:my_notes/models/note.dart';
 
 class Note1 {
   int? id = 10;
-  var title = "title";
-  var content = 'content';
-  var isTrash = true;
-  var isFav = false;
-  var isHidden = true;
+  String title = "title";
+  String content = 'content';
+  bool isTrash = true;
+  bool isFav = false;
+  bool isHidden = true;
 
   void checkNote() {
     var item = Note1();
