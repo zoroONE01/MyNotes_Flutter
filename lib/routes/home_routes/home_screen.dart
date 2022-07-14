@@ -6,7 +6,6 @@ import 'package:my_notes/constants/app_paths.dart';
 import 'package:my_notes/constants/app_strings.dart';
 import 'package:my_notes/constants/app_text_styles.dart';
 import 'package:my_notes/models/note.dart';
-import 'package:my_notes/providers/bot_nav_provider.dart';
 import 'package:my_notes/providers/notes_provider.dart';
 import 'package:my_notes/widgets/bot_nav_bar.dart';
 import 'package:my_notes/widgets/card_note.dart';
@@ -120,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                               children: [
-                                                const SizedBox(
+                                                SizedBox(
                                                   width: 5,
                                                 ),
                                                 SvgPicture.asset(
@@ -160,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   width: 32,
                                                   height: 32,
                                                 ),
-                                                const SizedBox(
+                                                SizedBox(
                                                   width: 5,
                                                 ),
                                               ],
@@ -267,7 +266,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     background: Colors.white,
                                                     isVertical: true),
                                               )
-                                            : const Placeholder(
+                                            : Placeholder(
                                                 color: Colors.transparent,
                                                 fallbackHeight: 198,
                                               ),
@@ -282,7 +281,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                           primary: false,
                                           shrinkWrap: true,
                                           itemBuilder: (context, index) {
-                                            final item = value.notes[index];
                                             return Dismissible(
                                               key: UniqueKey(),
                                               onDismissed: (direction) {
@@ -528,7 +526,6 @@ class _HomeTabBarState extends State<HomeTabBar> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       var provider = Provider.of<NotesProvider>(context, listen: false);
-      var navProvider = Provider.of<BotNavProvider>(context, listen: false);
       tfSearchController.addListener(() {
         // print(tfSearchController.text);
         provider.filterNotes(tfSearchController.text);
@@ -552,7 +549,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
             Column(
               children: [
                 Text(
-                  datimeutil.GetCurrentDate(),
+                  DatetimeUtil.getCurrentDate(),
                   style: AppTextStyles.body2,
                 ),
                 const Text(
