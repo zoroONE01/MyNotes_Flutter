@@ -6,6 +6,7 @@ import 'package:my_notes/constants/app_text_styles.dart';
 import 'package:my_notes/routes/app_router.dart';
 import 'package:my_notes/widgets/button_intro.dart';
 import 'package:provider/provider.dart';
+
 import '../../providers/tab_counter_provider.dart';
 import '../../widgets/button_back.dart';
 import '../../widgets/tab_indicator.dart';
@@ -65,7 +66,9 @@ class _IntroScreenState extends State<IntroScreen>
 
   @override
   Widget build(BuildContext context) {
-
+    introTabs.forEach((element) {
+      print(element.toString());
+    });
     return Scaffold(
       backgroundColor: Colors.white,
       body: DefaultTabController(

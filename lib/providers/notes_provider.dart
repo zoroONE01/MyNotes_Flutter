@@ -60,15 +60,26 @@ class NotesProvider with ChangeNotifier {
   }
 
   //tìm
-  void findAllNote() async {
-    final allRow = await dbHelper.findAllNote();
+  // void findAllNote() async {
+  //   final allRow = await dbHelper.findAllNote();
+  //   notes.clear();
+  //   notes = allRow
+  //       .map((e) => Note.fromMap(e))
+  //       .toList()
+  //       .where((element) =>
+  //           element.isTrash == 0 && element.isHidden == 0 && element.isFav == 0)
+  //       .toList();
+  //   notifyListeners();
+  // }
+
+  void findAllNote() {
     notes.clear();
-    notes = allRow
+    dbHelper.findAllNote().then((value) => notes = value
         .map((e) => Note.fromMap(e))
         .toList()
         .where((element) =>
             element.isTrash == 0 && element.isHidden == 0 && element.isFav == 0)
-        .toList();
+        .toList());
     notifyListeners();
   }
 
