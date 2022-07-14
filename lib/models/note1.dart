@@ -26,8 +26,9 @@ class Note1 {
   }
 
   void formatTitle(){
-    title.trim();
-    title.toUpperCase();
+    String str = ' this is new string '
+        ..toUpperCase()
+        ..trim();
   }
 
   Widget getText(BuildContext context){
