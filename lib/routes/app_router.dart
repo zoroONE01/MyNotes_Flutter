@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_notes/models/note.dart';
-import 'package:my_notes/routes/introroutes/intro_sreen.dart';
-import 'package:my_notes/routes/noteeditroutes/note_edit_screen.dart';
+import 'package:my_notes/routes/intro_routes/intro_sreen.dart';
+import 'package:my_notes/routes/note_edit_routes/note_edit_screen.dart';
 import 'home_routes/home_screen.dart';
 
 class AppRouter {
