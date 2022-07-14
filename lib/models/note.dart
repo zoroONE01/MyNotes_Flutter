@@ -24,19 +24,16 @@ class Note {
     isTrash = map[DatabaseHelper.clIsTrash] as int;
     isFav = map[DatabaseHelper.clIsFavourites] as int;
     isHidden = map[DatabaseHelper.clIsHidden] as int;
-
   }
 
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      DatabaseHelper.clId: id,
-      DatabaseHelper.clTitle: title,
-      DatabaseHelper.clContent: content,
-      DatabaseHelper.clIsTrash: isTrash,
-      DatabaseHelper.clIsHidden: isHidden,
-      DatabaseHelper.clIsFavourites: isFav
-    };
-  }
+  Map<String, dynamic> toMap() => <String, dynamic>{
+        DatabaseHelper.clId: id,
+        DatabaseHelper.clTitle: title,
+        DatabaseHelper.clContent: content,
+        DatabaseHelper.clIsTrash: isTrash,
+        DatabaseHelper.clIsHidden: isHidden,
+        DatabaseHelper.clIsFavourites: isFav
+      };
 
   int get id => _id;
 }

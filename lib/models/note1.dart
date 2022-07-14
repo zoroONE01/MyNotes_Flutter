@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_notes/models/note.dart';
 
 class Note1 {
   int? id = 10;
@@ -12,26 +11,26 @@ class Note1 {
   void checkNote() {
     var item = Note1();
   }
-  void nullCheck1(int? number){
+
+  void nullCheck1(int? number) {
     id = number ?? 1;
   }
 
-  void nullCheck2(Note1? note){
+  void nullCheck2(Note1? note) {
     id = note?.id;
   }
 
-  void concatArr(){
-    var y = [4,5,6];
-    var x = [1,2,...y];
+  void concatArr() {
+    var y = [4, 5, 6];
+    var x = [1, 2, ...y];
   }
 
-  void formatTitle(){
+  void formatTitle() {
     String str = ' this is new string '
-        ..toUpperCase()
-        ..trim();
+      ..toUpperCase()
+      ..trim();
   }
 
-  Widget getText(BuildContext context){
-    return isFav ? const Text("true"): const Text("false");
-  }
+  Widget getText(BuildContext context) =>
+      isFav ? const Text("true") : const Text("false");
 }
